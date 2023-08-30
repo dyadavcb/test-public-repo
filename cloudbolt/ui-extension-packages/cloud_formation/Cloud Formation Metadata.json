@@ -1,0 +1,27 @@
+{
+    "description": null,
+    "enabled": true,
+    "icon": "cft_icon_vrbAbzG.png",
+    "id": "XUI-j5390p26",
+    "label": "Cloud Formation",
+    "last_updated": "2023-08-30",
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "cloud_formation",
+    "package_contents": [
+        "urls.py",
+        "views.py",
+        "forms.py",
+        "__init__.py",
+        "shared.py",
+        "actions/generate_options_for_aws_specific_params.py",
+        "actions/generate_options_for_env_id.py",
+        "actions/teardown_cft.py",
+        "actions/deploy_cft.py",
+        "templates/admin.html",
+        "templates/tab-sourcecontrol.html",
+        "templates/tab-blueprints.html",
+        "icons/cft_icon.png"
+    ],
+    "version": ""
+}

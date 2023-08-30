@@ -1,0 +1,74 @@
+
+
+<div class="container-fluid">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h2 class="panel-title">CloudFormation Template Library</h2>
+        </div>
+        <div class="panel-body">
+            <div class="btn-toolbar">
+                <a class="btn open-dialog cb-btn-primary" href="{% url 'cloudformation_create' %}"><span class="icon-add"></span> Create new CloudFormation Template Blueprint</a>
+            </div>
+            {% if cfts %}
+                <p>List of CloudFormation Blueprints (has <code>CloudFormation</code> in <b>Labels</b> field).</p>
+                <table class="dataTable no-footer table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Blueprint Name</th>
+                            <th>Active Resources</th>
+                            <th>ConnectionInfo</th>
+                            <th>ConnectionInfo Type</th>
+                            <th>Git URL</th>
+                            <th>Allowed Environments</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cft in cfts %}
+                        <tr>
+                            <td>
+                                {% if cft.ci_error %}
+                                    {{ cft.ci_error }}
+                                {% else %}
+                                    {% if cft.resource_type.icon %}
+                                        <span class="{{ cft.resource_type.icon }}"></span>
+                                    {% endif %}
+                                {% endif %}
+                                <a href="{% url 'blueprint_detail' cft.bp.id %}">{{cft.bp.name}}</a>
+                            </td>
+                            <td>
+                                <a href="{% url 'blueprint_detail' cft.bp.id %}/#tab-resources">{{ cft.resource_count }}</a>
+                            </td>
+                            <td>
+                                {% if cft.conn_info %}
+                                <a href="{% url 'connectioninfo_detail' cft.conn_info.id %}">{{cft.conn_info.name}}</a>
+                                {% else %}
+                                N/A
+                                {% endif %}
+                            </td>
+                            <td>{{cft.conn_info_type|title}}</td>
+                            <td><a href="{{cft.url}}" target="_blank">{{cft.filename}}</a></td>
+                            <td>{% if cft.allowed_envs == 'all_capable' %}All Capable{% else %}{% for env in cft.allowed_envs %}<a href="{% url 'env_detail' env.id %}">{{env.name}}</a><br>{% endfor %}{% endif %}</td>
+                            <td class="shrink">
+                                <div class="btn-group">
+                                    <a class="icon-sync btn btn-default btn-sm open-dialog"
+                                       href="{% url 'sync_cft_blueprint' cft.bp.id %}"></a>
+                                    <a class="icon-edit btn btn-default btn-sm open-dialog"
+                                        href="{% url 'edit_cft_blueprint' cft.bp.id %}"></a>
+                                    <a class="icon-delete btn btn-default btn-sm open-dialog"
+                                        href="{% url 'delete_cft_blueprint' cft.bp.id %}"></a>
+                                </div>
+                            </td>
+{#                            <td><i class="fas fa-sync"></i>{% comment %}<a class="btn open-dialog btn-default" href="{% url 'cloudformation_edit' cft.id %}"><i class="fas fa-pencil-alt"></i> Edit</a>{% endcomment %}</td>#}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <div class="alert alert-info w-75">
+                    <p><i class="fas fa-info-circle mr-2"></i> No CloudFormation backed Blueprints are currently deployed in the environment.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
