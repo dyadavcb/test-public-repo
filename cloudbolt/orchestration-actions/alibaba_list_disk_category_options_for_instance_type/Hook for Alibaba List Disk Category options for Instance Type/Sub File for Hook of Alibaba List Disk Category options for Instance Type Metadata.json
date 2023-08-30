@@ -1,0 +1,14 @@
+{
+    "description": "Gets the disk options for the selected Alibaba instance type.",
+    "id": "OHK-2a0vedps",
+    "last_updated": "2023-08-30",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Alibaba List Disk Category options for Instance Type",
+    "resource_technologies": [],
+    "script_filename": "Sub File for Hook of Alibaba List Disk Category options for Instance Type Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}

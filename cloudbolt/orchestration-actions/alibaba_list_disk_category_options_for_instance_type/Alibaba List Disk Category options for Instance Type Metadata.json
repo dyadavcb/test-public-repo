@@ -1,0 +1,15 @@
+{
+    "action_input_default_values": [],
+    "base_action_name": "Alibaba List Disk Category options for Instance Type",
+    "continue_on_failure": false,
+    "description": null,
+    "enabled": true,
+    "hook_point": "Generated Parameter Options",
+    "id": "HPA-11n0amis",
+    "last_updated": "2023-08-30",
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Alibaba List Disk Category options for Instance Type",
+    "run_on_statuses": "",
+    "run_seq": 9
+}
