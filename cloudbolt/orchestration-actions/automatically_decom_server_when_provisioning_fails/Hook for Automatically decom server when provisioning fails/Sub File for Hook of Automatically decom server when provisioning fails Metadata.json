@@ -1,0 +1,14 @@
+{
+    "description": "Sample action automatically decommissions server if its provision job fails.",
+    "id": "OHK-njjrc3yg",
+    "last_updated": "2023-08-31",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Automatically decom server when provisioning fails",
+    "resource_technologies": [],
+    "script_filename": "Sub File for Hook of Automatically decom server when provisioning fails Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}
