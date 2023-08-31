@@ -1,0 +1,14 @@
+{
+    "description": "",
+    "id": "OHK-x07j8yue",
+    "last_updated": "2023-08-31",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Discover AWS ECS Cluster Service",
+    "resource_technologies": [],
+    "script_filename": "Discover AWS ECS Cluster Service Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}

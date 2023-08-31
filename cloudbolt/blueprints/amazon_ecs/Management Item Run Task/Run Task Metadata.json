@@ -1,0 +1,227 @@
+{
+    "action_input_default_values": [],
+    "action_inputs": [
+        {
+            "allow-multiple": false,
+            "available-all-servers": false,
+            "description": "",
+            "field-dependency-controlling-set": [
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a175"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_security_group_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field-dependency-dependent-set": [],
+            "global-options": [],
+            "hide-if-default-value": false,
+            "label": "Security Group",
+            "name": "aws_security_group",
+            "placeholder": null,
+            "relevant-osfamilies": [],
+            "required": true,
+            "show-as-attribute": false,
+            "show-on-servers": false,
+            "type": "STR",
+            "value-pattern-string": null
+        },
+        {
+            "allow-multiple": false,
+            "available-all-servers": false,
+            "description": "",
+            "field-dependency-controlling-set": [
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a175"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_subnet_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field-dependency-dependent-set": [],
+            "global-options": [],
+            "hide-if-default-value": false,
+            "label": "Subnet",
+            "name": "aws_subnet",
+            "placeholder": null,
+            "relevant-osfamilies": [],
+            "required": true,
+            "show-as-attribute": false,
+            "show-on-servers": false,
+            "type": "STR",
+            "value-pattern-string": null
+        },
+        {
+            "allow-multiple": false,
+            "available-all-servers": false,
+            "description": null,
+            "field-dependency-controlling-set": [
+                {
+                    "controlling-field": {
+                        "name": "task_definition_a175"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "launch_type_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field-dependency-dependent-set": [],
+            "global-options": [],
+            "hide-if-default-value": false,
+            "label": "Launch Type",
+            "name": "launch_type",
+            "placeholder": null,
+            "relevant-osfamilies": [],
+            "required": true,
+            "show-as-attribute": false,
+            "show-on-servers": false,
+            "type": "STR",
+            "value-pattern-string": null
+        },
+        {
+            "allow-multiple": false,
+            "available-all-servers": false,
+            "description": null,
+            "field-dependency-controlling-set": [
+                {
+                    "controlling-field": {
+                        "name": "task_definition_a175"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "network_mode_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field-dependency-dependent-set": [
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a175"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_security_group_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                },
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a175"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_subnet_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "global-options": [],
+            "hide-if-default-value": false,
+            "label": "Network Mode",
+            "name": "network_mode",
+            "placeholder": null,
+            "relevant-osfamilies": [],
+            "required": true,
+            "show-as-attribute": false,
+            "show-on-servers": false,
+            "type": "STR",
+            "value-pattern-string": null
+        },
+        {
+            "allow-multiple": false,
+            "available-all-servers": false,
+            "description": null,
+            "field-dependency-controlling-set": [],
+            "field-dependency-dependent-set": [
+                {
+                    "controlling-field": {
+                        "name": "task_definition_a175"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "launch_type_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                },
+                {
+                    "controlling-field": {
+                        "name": "task_definition_a175"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "network_mode_a175"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "global-options": [],
+            "hide-if-default-value": false,
+            "label": "Task Definition",
+            "name": "task_definition",
+            "placeholder": null,
+            "relevant-osfamilies": [],
+            "required": true,
+            "show-as-attribute": false,
+            "show-on-servers": false,
+            "type": "STR",
+            "value-pattern-string": null
+        }
+    ],
+    "base_action_name": "Run Task",
+    "dangerous": false,
+    "dialog_message": "",
+    "enabled": true,
+    "extra_classes": "glyphicon glyphicon-play",
+    "id": "RSA-mc3vqers",
+    "is_synchronous": false,
+    "label": "Run Task",
+    "last_updated": "2023-08-31",
+    "list_view_visible": true,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "requires_approval": false,
+    "submit_button_label": ""
+}

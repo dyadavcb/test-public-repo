@@ -1,0 +1,389 @@
+{
+    "action_inputs": [
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_security_group_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Security Group",
+            "name": "aws_security_group",
+            "placeholder": "-- select the security group --",
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_subnet_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Subnet",
+            "name": "aws_subnet",
+            "placeholder": "-- select the subnet --",
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The name of a container",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Container Name",
+            "maximum": "255.00",
+            "name": "container_name",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The port number on the container that is bound to the user-specified or automatically assigned host port. e.g. 80",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc",
+                        "bridge",
+                        "host"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "containerPort_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Container Port",
+            "name": "containerPort",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "INT",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": null,
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Create Service",
+            "name": "create_service",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The image used to start a container, e.g. -  nginx:latest, httpd:2.4, tomcat",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Docker Image",
+            "name": "docker_image",
+            "placeholder": "e.g. -  nginx:latest, httpd:2.4, tomcat",
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "Determines what happens if this container fails or stops for any reason. If essential is true then all other containers that are part of the task are stopped.",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Essential",
+            "name": "essential",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "BOOL",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "A name for this task definition",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Task Definition Name",
+            "name": "family_name",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": null,
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [
+                {
+                    "controlling-field": {
+                        "name": "launch_type_capabilities_a173"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Launch Type Capabilities",
+            "name": "launch_type_capabilities",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The Docker networking mode to use for the containers in this task.",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "launch_type_capabilities_a173"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_security_group_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                },
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_subnet_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                },
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc",
+                        "bridge",
+                        "host"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "containerPort_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                },
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc",
+                        "bridge",
+                        "host"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "protocol_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Network Mode",
+            "name": "networkMode",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The protocol used for the port mapping.",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "networkMode_a173"
+                    },
+                    "custom-field-options": [
+                        "awsvpc",
+                        "bridge",
+                        "host"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "protocol_a173"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Protocol",
+            "name": "protocol",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        }
+    ],
+    "action_inputs_sequence": [
+        "launch_type_capabilities",
+        "family_name",
+        "networkMode",
+        "container_name",
+        "containerPort",
+        "docker_image",
+        "essential",
+        "protocol",
+        "create_service",
+        "aws_subnet",
+        "aws_security_group"
+    ],
+    "description": "Register AWS ECS register task definition",
+    "id": "OHK-qblthab9",
+    "last_updated": "2023-08-31",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Register task definition",
+    "resource_technologies": [],
+    "script_filename": "Sub File for Hook of Register task definition Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}

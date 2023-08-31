@@ -1,0 +1,226 @@
+{
+    "action_inputs": [
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a170"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_security_group_a170"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Security Group",
+            "name": "aws_security_group",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "",
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a170"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_subnet_a170"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Subnet",
+            "name": "aws_subnet",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The number of instantiations of the specified task definition to place and keep running on this cluster.",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Desired Count",
+            "maximum": "100.00",
+            "minimum": "1.00",
+            "name": "desired_count",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "INT",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": null,
+            "field_dependency_controlling_set": [
+                {
+                    "controlling-field": {
+                        "name": "task_definition_a170"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "network_mode_a170"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "field_dependency_dependent_set": [
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a170"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_security_group_a170"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                },
+                {
+                    "controlling-field": {
+                        "name": "network_mode_a170"
+                    },
+                    "custom-field-options": [
+                        "awsvpc"
+                    ],
+                    "dependency-type": "SHOWHIDE",
+                    "dependent-field": {
+                        "name": "aws_subnet_a170"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Network Mode",
+            "name": "network_mode",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The name of your service. Up to 255 letters (uppercase and lowercase), numbers, hyphens, and underscores are allowed.",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Service Name",
+            "maximum": "255.00",
+            "name": "service_name",
+            "placeholder": null,
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        },
+        {
+            "allow_multiple": false,
+            "available_all_servers": false,
+            "description": "The family and revision (family:revision ) or full ARN of the task definition to run in your service.",
+            "field_dependency_controlling_set": [],
+            "field_dependency_dependent_set": [
+                {
+                    "controlling-field": {
+                        "name": "task_definition_a170"
+                    },
+                    "custom-field-options": [],
+                    "dependency-type": "REGENOPTIONS",
+                    "dependent-field": {
+                        "name": "network_mode_a170"
+                    },
+                    "maximum": null,
+                    "minimum": null,
+                    "regex": ""
+                }
+            ],
+            "global_options": [],
+            "hide_if_default_value": false,
+            "label": "Task Definition",
+            "name": "task_definition",
+            "placeholder": "-- select the task definition --",
+            "relevant_osfamilies": [],
+            "required": true,
+            "show_as_attribute": false,
+            "show_on_servers": false,
+            "type": "STR",
+            "value_pattern_string": null
+        }
+    ],
+    "action_inputs_sequence": [
+        "service_name",
+        "desired_count",
+        "task_definition",
+        "network_mode",
+        "aws_subnet",
+        "aws_security_group"
+    ],
+    "description": "Create Amazon ECS container service",
+    "id": "OHK-yfhf1xxn",
+    "last_updated": "2023-08-31",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Create Container Service",
+    "resource_technologies": [],
+    "script_filename": "Sub File for Hook of Create Container Service Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}

@@ -1,0 +1,37 @@
+{
+    "action_input_default_values": [],
+    "action_inputs": [
+        {
+            "allow-multiple": false,
+            "available-all-servers": false,
+            "description": "",
+            "field-dependency-controlling-set": [],
+            "field-dependency-dependent-set": [],
+            "global-options": [],
+            "hide-if-default-value": false,
+            "label": "Task Definition",
+            "name": "task_definition",
+            "placeholder": "-- select the task definition --",
+            "relevant-osfamilies": [],
+            "required": true,
+            "show-as-attribute": false,
+            "show-on-servers": false,
+            "type": "STR",
+            "value-pattern-string": null
+        }
+    ],
+    "base_action_name": "Deregister task Definition",
+    "dangerous": false,
+    "dialog_message": "",
+    "enabled": true,
+    "extra_classes": "glyphicon glyphicon-remove",
+    "id": "RSA-c1fsgi8g",
+    "is_synchronous": false,
+    "label": "Deregister Task Definition",
+    "last_updated": "2023-08-31",
+    "list_view_visible": true,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "requires_approval": false,
+    "submit_button_label": ""
+}
