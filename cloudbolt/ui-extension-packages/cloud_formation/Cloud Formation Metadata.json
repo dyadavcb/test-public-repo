@@ -4,7 +4,7 @@
     "icon": "cft_icon_vrbAbzG.png",
     "id": "XUI-j5390p26",
     "label": "Cloud Formation",
-    "last_updated": "2023-08-30",
+    "last_updated": "2023-08-31",
     "maximum_version_required": "",
     "minimum_version_required": "8.6",
     "name": "cloud_formation",
