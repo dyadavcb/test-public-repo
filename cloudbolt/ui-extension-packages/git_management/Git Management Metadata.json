@@ -1,0 +1,28 @@
+{
+    "description": null,
+    "enabled": true,
+    "icon_url": "",
+    "id": "XUI-n173uwe7",
+    "label": "Git Management",
+    "last_updated": "2023-08-31",
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "git_management",
+    "package_contents": [
+        "views.py",
+        "__init__.py",
+        "urls.py",
+        "utilities.py",
+        "forms.py",
+        "config.py",
+        "templates/admin_page.html",
+        "templates/tab-config.html",
+        "templates/tab-content.html",
+        "templates/tab-server_actions.html",
+        "templates/tab-orchestration_actions.html",
+        "templates/tab-recurring_jobs.html",
+        "templates/tab-ui_extensions.html",
+        "templates/tab-docs.html"
+    ],
+    "version": ""
+}
