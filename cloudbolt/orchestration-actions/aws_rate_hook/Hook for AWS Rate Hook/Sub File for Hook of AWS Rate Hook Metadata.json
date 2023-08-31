@@ -1,0 +1,17 @@
+{
+    "description": "Calculate server rate using Amazon pricing data",
+    "id": "OHK-gd8y88vw",
+    "last_updated": "2023-08-31",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "AWS Rate Hook",
+    "resource_technologies": [
+        "Amazon Web Services",
+        "AWS GovCloud (US)"
+    ],
+    "script_filename": "Sub File for Hook of AWS Rate Hook Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}

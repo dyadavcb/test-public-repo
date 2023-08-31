@@ -1,0 +1,15 @@
+{
+    "action_input_default_values": [],
+    "base_action_name": "AWS Rate Hook",
+    "continue_on_failure": false,
+    "description": null,
+    "enabled": true,
+    "hook_point": "Compute Server Rate",
+    "id": "HPA-jpa3c0rt",
+    "last_updated": "2023-08-31",
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "AWS Rate Hook",
+    "run_on_statuses": "",
+    "run_seq": 1
+}
