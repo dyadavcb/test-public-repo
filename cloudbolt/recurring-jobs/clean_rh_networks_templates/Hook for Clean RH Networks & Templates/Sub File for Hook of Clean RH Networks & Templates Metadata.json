@@ -1,0 +1,14 @@
+{
+    "description": "Cleans up any networks or templates in CB that are no longer valid\n            by syncing with what is on the Resource Handler.\n            This action can be set to run periodically via Admin > Recurring Jobs.",
+    "id": "OHK-rgtjkqtp",
+    "last_updated": "2023-08-31",
+    "max_retries": 0,
+    "maximum_version_required": "",
+    "minimum_version_required": "8.6",
+    "name": "Clean RH Networks & Templates",
+    "resource_technologies": [],
+    "script_filename": "Sub File for Hook of Clean RH Networks & Templates Script.py",
+    "shared": false,
+    "target_os_families": [],
+    "type": "CloudBolt Plug-in"
+}
