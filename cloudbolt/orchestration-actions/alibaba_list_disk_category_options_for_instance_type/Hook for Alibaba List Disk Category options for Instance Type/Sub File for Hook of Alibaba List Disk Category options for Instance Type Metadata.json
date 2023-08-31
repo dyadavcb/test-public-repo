@@ -1,7 +1,7 @@
 {
     "description": "Gets the disk options for the selected Alibaba instance type.",
     "id": "OHK-2a0vedps",
-    "last_updated": "2023-08-30",
+    "last_updated": "2023-08-31",
     "max_retries": 0,
     "maximum_version_required": "",
     "minimum_version_required": "8.6",
